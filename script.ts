@@ -40,14 +40,16 @@ function playSingleGame(playerSelection: string, computerSelection: string): str
 // Play a game
 function playGame() {
 	console.log(playSingleGame(prompt("Choose rock, paper or scissor"), getComputerChoice()));
-	console.log(playSingleGame(prompt("choose"), getComputerChoice()));
-	console.log(playSingleGame(prompt("choose"), getComputerChoice()));
-	console.log(playSingleGame(prompt("choose"), getComputerChoice()));
-	console.log(playSingleGame(prompt("choose"), getComputerChoice()));
+	console.log(playSingleGame(prompt("Choose rock, paper or scissor"), getComputerChoice()));
+	console.log(playSingleGame(prompt("Choose rock, paper or scissor"), getComputerChoice()));
+	console.log(playSingleGame(prompt("Choose rock, paper or scissor"), getComputerChoice()));
+	console.log(playSingleGame(prompt("Choose rock, paper or scissor"), getComputerChoice()));
 	if (playerScore > computerScore) {
-		console.log(`Congratulations player! You won with ${playerScore} points vs the computers ${computerScore}points`) 
-	} else {	
-		console.log(`I'm sorry player! You lost with ${playerScore} points vs the computers ${computerScore}points`)
+		console.log(`Congratulations player! You won with ${playerScore} points vs the computers ${computerScore} points`) 
+	} else if (playerScore < computerScore) {	
+		console.log(`I'm sorry player! You lost with ${playerScore} points vs the computers ${computerScore} points`)
+	} else {
+		console.log(`It's a tie! You both got ${playerScore} points! `)
 	}
 }
 playGame();
