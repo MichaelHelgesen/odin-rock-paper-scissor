@@ -81,6 +81,7 @@ function resetGame(element) {
     computerScore = 0;
     computerScoreDiv.innerText = computerScore.toString();
     playerScoreDiv.innerText = playerScore.toString();
+    winnerPresentation.innerText = "";
     inputButtons.forEach(function (e) { return e.disabled = false; });
     scoreBoard.removeChild(element);
 }

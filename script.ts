@@ -82,6 +82,7 @@ function  resetGame(element: HTMLButtonElement): void {
 	computerScore = 0;
 	computerScoreDiv.innerText = computerScore.toString();
 	playerScoreDiv.innerText = playerScore.toString();
+	winnerPresentation.innerText = "";
 	inputButtons.forEach(e => e.disabled = false);
 	scoreBoard.removeChild(element);
 };
